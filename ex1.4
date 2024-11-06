@@ -1,0 +1,8 @@
+Starting the docker with: 
+docker run -dit --name task ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;done'
+
+Installing curl with new process: 
+docker exec -it task bash
+Inside the process
+apt-get -y update;
+apt-get -y install curl
